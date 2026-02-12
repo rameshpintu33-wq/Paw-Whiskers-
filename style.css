@@ -1,0 +1,207 @@
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    border-radius: 30px;
+  }
+
+  .product-card img {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+body {
+  background: linear-gradient(90deg, #eef2ea, #fff2dc);
+}
+
+/* HEADER */
+.header {
+  min-height: 100vh;
+  position: relative;
+  padding: 30px 60px;
+  background-image: url("PAW_PATTERN.png"); /* optional */
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 30px;      /* change size here */
+  height: 30px;
+  margin-right: 8px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+/* HERO TEXT */
+.hero-text {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  color: #2f3e46;
+}
+
+.hero-text p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #4a5d63;
+}
+
+/* SHOP BUTTONS */
+.shop-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.shop {
+  padding: 14px 35px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.shop.dog {
+  background: #f4a261;
+}
+
+.shop.cat {
+  background: #8ecae6;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 650px; /* slightly bigger */
+  padding: 25px 35px;
+  
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+
+  border-radius: 60px;
+  margin: 50px auto;
+  
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+   z-index: 1;
+
+  transition: all 0.4s ease;
+}
+
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  padding: 3px;
+  background: linear-gradient(45deg, #f4a261, #8ecae6);
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+/* Text section */
+.product-text {
+  flex: 1;
+}
+
+/* Image styling */
+.product-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 20px;
+  margin-left: 20px;   /* space between text and image */
+}
+
+/* Button */
+.product-card button {
+  margin-top: 10px;
+  padding: 8px 22px;
+  border-radius: 25px;
+  border: 1px solid #999;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: black;
+  color: white;
+}
+
+
+/* PET IMAGES */
+.dog-img {
+  position: absolute;
+  bottom: 800px;
+  left: 50px; 
+  transform: translateX(-50%);
+  width: 500px;
+  z-index: -5;
+}
+
+.cat-img {
+  position: absolute;
+  bottom: 500px;
+  right: 60px;
+  transform: translateX(+50%);
+  width: 590px;
+  z-index: -5;
+}
+
+
+
+
+
+
